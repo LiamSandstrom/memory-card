@@ -15,6 +15,7 @@ async function fetchPokemon() {
       const res = await fetch(`https://pokeapi.co/api/v2/pokemon/${id}/`);
       const d = await res.json();
       return {
+        id: d.id,
         name: d.name,
         image: d.sprites.front_default,
       };
