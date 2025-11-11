@@ -1,8 +1,9 @@
-export default function Card({ data }) {
+export default function Card({ name, image, cardClicked }) {
   return (
-    <div className="card">
-      <img src={data.image} alt="" />
-      <h2>{data.name}</h2>
+    <div onClick={cardClicked} className="card">
+      <img draggable={false} src={image} alt={name} />
+      <h2>{name}</h2>
+      <div className="white-bottom"></div>
     </div>
   );
 }
